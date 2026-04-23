@@ -1,0 +1,210 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 20px;
+}
+main{
+    width: 100%;
+    min-height: 800px;
+    gap: 28px;
+}
+.napis{
+    color:#e77491;
+    font-size: 60px;
+    float: right;
+    text-align: left;
+    margin-right: 190px;
+    animation: napisWejscie 1.5s ease;
+}   
+@keyframes napisWejscie{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+a{
+    text-decoration: none;
+    color: #b15c71;
+}
+.informacja{
+    width: 35%;
+    height: 760px;
+    background-image: url("chika.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin: 40px;
+    border: #7a5260 6px dashed;
+    padding: 30px;
+
+}
+.users{
+    font-size: 20px;
+    width: 70%;
+    color: #b04c64;
+    background-color:#ffacc94a;
+    border-radius: 25px;
+    text-align: left;
+    padding: 15px 20px;
+    margin-top: 170px;
+    margin-left: 55px;
+    margin-bottom: 10px;
+     animation: usersSoft 1s ease;
+    transition: 0.3s;
+
+}
+.users:hover{
+    transform: translateY(-4px);
+    background-color: #ffacc970;
+}
+@keyframes usersSoft{
+    from{
+        opacity: 0;
+        transform: translateY(25px) scale(0.96);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.menu span{
+    color: #7a5260;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    background-color: #FB6F92;
+    padding: 12px 20px;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    background-color: #ff8fab;
+    transform: translateY(-2px);
+}
+
+.products{
+    width: 100%;
+    min-height: 1030px;
+    background-image: url("Back.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 28px;
+}
+
+.product-card{
+    width: 25%; 
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 35px;
+    text-align: left;
+    margin-right: 200px;
+    margin-top: 50px;
+    border: #ff8fab 3px dashed;
+    padding: 20px;
+    animation: cardSoft 1.3s ease;
+    transition: 0.3s;
+    
+}
+.product-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(255, 143, 171, 0.35);
+}
+@keyframes cardSoft{
+    from{
+        opacity: 0;
+        transform: translateX(40px) scale(0.96);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.product-card h3{
+    color: #FB6F92;
+    font-size: 30px;
+    font-style: oblique;
+    margin-bottom: 15px;
+}
+
+.product-card p{
+    padding-left: 0;
+    font-size: 20px;
+    color: #7a5260;
+}
+
+.status{
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.status.dostepny{
+    background-color: #e8f8ef;
+    color: #2e8b57;
+}
+
+.status.sprzedany{
+    background-color: #f8e8ec;
+    color: #b04c64;
+}
+
+.buy-btn{
+    display: inline-block;
+    margin-top: 18px;
+    text-decoration: none;
+    background-color: #FB6F92;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+
+.buy-btn:hover{
+    background-color: #ff8fab;
+    transform: translateY(-2px);
+}
+
+@media(max-width: 700px){
+    .products{
+        padding: 35px 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .product-card{
+        padding: 24px;
+    }
+
+    .menu{
+        flex-direction: column;
+    }
+}
