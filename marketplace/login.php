@@ -14,13 +14,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
-    if ($user && password_verify($haslo, $user["haslo"])) {
+    if (!$user) {
+        echo "Użytkownik o takim loginie lub emailu nie istnieje";
+    } elseif (password_verify($haslo, $user["haslo"])) {
         $_SESSION["user_id"] = $user["id"];
         $_SESSION["login"] = $user["login"];
         header("Location: index.php");
         exit;
     } else {
-        echo "Niepoprawny login lub hasło";
+        echo "Niepoprawne hasło";
     }
 }
 ?>
